@@ -1,0 +1,39 @@
+**Servlet**
+
+WAS : Web Application Server
+	(Web Server + Web Container)
+	Web Server - http 프로토콜 기반 서비스
+	Web Container - Servlet 과 JSP 실행환경 제공
+	
+HTTP : HyperText Tranfer Protocol
+	stateless 한 특징 (상태를 유지 X)
+	
+Servlet : java web application 구현을 지원하는 기술
+			java class(java class 내에서 html을 표현)
+			Model2 MVC에서 Controller의 역할을 한다.
+JSP : Java Server page
+		동적인 웹 뷰(화면)를 지원하는 기술
+		Web Container에 의해 java class(Servlet)으로 변환되어 생성
+		HTML내에 java code를 삽입하는 형태
+		->웹화면 구현에 용이
+		
+요청방식
+	html상에서는 <form method="get" action="url">
+	과 같이 요청방식을 정한다.
+	
+- get 방식
+	: 정보 조회 용도
+	url 에 요청 파라미터 노출
+	(예 : http://127.0.0.1:8888/FindMember?id=java&name=아이유
+	별도의 요청 메서드 설정 없으면 기본이 get 방식이다.
+	즉 모든 a tag 애 의거한 링크는 get 방식
+	
+- post 방식
+	: 정보 전송 용도 (ex-회원가입,로그인 ..)
+	브라우저 상에 노출되지 않는다.
+	(http body영역에 전송 : 별도의 한글 인코딩이 필요)
+	정보 노출시키지 않거나 용량이 많은 데이터를 전달할 때는
+	반드시 post 방식으로 요청메서드를 설정햐여헌더,ㅇㅇㅇ/
+
+
+

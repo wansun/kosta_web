@@ -1,0 +1,28 @@
+***Model2 회원관리***
+- 요구분석  
+   아이디에 의한 회원검색
+   주소에 의한 회원검색 
+   로그인 
+   카페 
+   로그아웃
+    
+ - 설계    	
+	application :  class diagram ( 파일리스트로 대체하자 ) 
+					Model -> MemberDTO , MemberDAO 
+					View -> 아까 주석을 참고 
+					Controller  -> 업무별로 자체 해결 
+					
+	database : erd ( 이후 공부예정 ) 
+				 table 은 기존의 member table을 이용한다 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

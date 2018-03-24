@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html table 연습</title>
+<!-- css를 이용해 table 디자인 스타일을 일괄적으로 처리 -->
+<style type="text/css">
+	table{
+		border-collapse: collapse;
+	}
+	table,td{
+		border: 1px solid fuchsia;
+	}
+	/* 내부 간격을 준다 */
+	td{
+		padding: 5px;
+	}
+</style>
+<!-- javascript 는 웹페이지에서 행위를 담당한다. -->
+<script type="text/javascript">
+	//alert("방가방가");
+	function test() {
+		alert("버튼을 눌렀네용");
+	}
+</script>
+</head>
+<body>
+1행 1열
+<table>
+	<tr>
+		<td>아이유</td>
+	</tr>
+</table>
+<br><br>
+
+2행1열
+<table>
+	<tr>
+		<td>아이유</td>
+	</tr>
+	<tr>
+		<td>장기하</td>
+	</tr>
+</table>
+<br><br>
+
+1행2열  이름  아이유
+<table>
+<tr>
+	<td>이름</td><td>아이유</td>
+</tr>
+</table>
+<!--  번호       제목        작성자 -->
+<!--  1       방가         아이유 -->
+<!--  2        당첨        이승수 -->
+<br><br><br>
+주석 내용 만들기
+<table style="color: lime;" >
+<tr>
+	<td>번호</td><td>제목</td><td>작성자</td>
+</tr>
+<tr>
+	<td>1</td><td>방가</td><td>아이유</td>
+</tr>
+<tr>
+	<td>2</td><td>당첨</td><td>이승수</td>
+</tr>
+</table>
+<!-- javascript test -->
+<input type="button" onclick="test()" value="테스트">
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,47 @@
+** 서블릿 라이프 사이클(LifeCycle) **
+init(ServletConfig) : 서블릿 초기화 (한번 실행)
+service(request,response) : 클라이언트에게 서비스 (클라이언트 요청수 만큼 실행)
+destroy() : 서블릿 해제 전 호출되는 메서드 (한번 실행)
+
+						WAS(Web Container)
+client1 ---request---- is loaded? ----no---- class loading
+						 ㅣ						    ㅣ
+						yes 				    서블릿 객체생성
+client2 ---request		ㅣ						    ㅣ
+						ㅣ					  init(servletConfig)
+						ㅣ					           ㅣ       
+			                       ㅣ ---------->   	  service(request,response)   
+           destroy()
+           
+ex) 로그인서블릿에 클라이언트가 세명이 접속하여 서비스를 받았다.
+	로그인서블릿 객체는 1개 생성
+	로그인서블릿 init() 은 1번 실행
+	로그인서블릿 service() 는 3번 실행
+
+
+** ServletConfig와 ServletContext **
+ServletConfig : 서블릿 객체 당 하나 생성
+				개별 서블릿의 설정 정보를 저장하는 객체
+				서블릿의 init() 메서드 실행시 웹컨테이너가
+				생성해서 주입한다
+				개별 서블릿은 이때 주입된 ServletConfig 객체를 이용해
+				웹어플리케이션 공유 객체인 ServletContext에 접근할 수 있다.
+				
+ServletContext : 웹어플리케이션 당 하나 생성 
+				웹어플리케이션의 설정 정보를 저장하는 객체
+				웹어플리케이션 내의 모든 서블릿과 jsp가 공유하는 정보
+
+
+ServletContextListener :
+웹 어플리케이션 시작 시점에 생성되는 ServletContext객체 생성 및
+소멸 시점에 이벤트 처리를 담당한다. (ServletContext LifeCycle event listener)
+contextInitialized(event) - ServletContext 생성 직후에 실행
+contextDestroyed(event) - ServletContext 해제 직전에 실행
+
+
+
+
+
+
+	
+	

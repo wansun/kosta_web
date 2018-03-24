@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>등록</title>
+</head>
+<body>
+<!--	 test.MemberListListener implements ServletContextListener
+		위 리스너에서 웹어플리케이션 처음 시작 시점에
+		ArrayList<Member> 타입의 리스트를 생성해 할당해서
+		ServletContext 에 setAttribute("list",list)한다
+		
+		test.RegServlet에서는 전송된 별명과 이메일을 받아서
+		ServletContext에 저장된 list에 정보를 추가한다
+		(MemberVO 객체를 생성해 리스트의 요소로 추가)
+		화면상에서는   엔젤님 리스트에 등록되었습니다.
+		등록목록보기 링크를 제공해 test.ListServlet 에 연결한다.
+		
+		test.ListServlet 에서는 현재까지 등록된 모든 Member의 
+		목록을 제공한다.
+		
+		1. 엔젤 angel@daum.net
+		2. 천사 agel2@naver.com 
+ -->
+<form action="RegServlet" method="post">
+별명<input type="text" name="nick" required="required"><br>
+이메일<input type="text" name="email" required="required"><br>
+<input type="submit" value="등록">
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloServlet test</title>
+</head>
+<body>
+<!-- form 요소
+		action="처리할 서버 url(web.xml 또는 annotation 에 명시)"
+		method="get or post 요청방식"
+		name="form 이름" 
+ -->
+<form action="hello" method="get"><!-- web.wml 의 url patten 명과 액션과 같음 -->
+음식명 <input type="text" name="menu">
+<input type="submit" value="요청">
+</form>
+<hr>
+<!--
+	HelloServlet에서는 doGet() 즉 get방식 요청만 처리되도록
+	구현되어있으므로 http 405 error가 발생한다 
+ -->
+<form action="hello" method="post">
+<input type="submit" value="post 요청">
+</form>
+</body>
+</html>

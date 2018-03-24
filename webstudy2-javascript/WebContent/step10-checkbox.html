@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step10-checkbox</title>
+<script type="text/javascript">
+	function order() {
+		//food name으로 여러 요소가 있어서 배열로 인식한다.
+		//alert(document.menuForm.food.length);
+		var fo=document.menuForm.food;
+		//alert(fo[0].value);
+		alert(fo[0].checked==false);//체크 상태를 확인
+		//김밥 체크박스를 체크 하겠다
+		fo[2].checked=true;
+	}
+</script>
+</head>
+<body>
+<form name="menuForm">
+	<input type="checkbox" name="food" value="스파게티">스파게티<br>
+	<input type="checkbox" name="food" value="떡볶이">떡볶이<br>
+	<input type="checkbox" name="food" value="김밥">김밥<br>
+	<input type="button" value="주문" onclick="order()">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript 배열</title>
+<script type="text/javascript">
+	function testArray() {
+		var arr=new Array(3);
+		arr[0]="조민경";
+		arr[1]="용다은";
+		arr[2]="김지은";
+		for(var i=0;i<arr.length;i++){
+			alert(arr[i]);
+		}
+	}
+	
+	function testArray2() {
+		var arr=[];
+		arr.push("조민경");
+		arr.push("용다은");
+		arr.push("김지은");
+		for(var i=0;i<arr.length;i++){
+			alert(arr[i]);
+		}
+	}
+</script>
+</head>
+<body>
+<input type="button" value="배열테스트" onclick="testArray()">
+<input type="button" value="배열테스트2" onclick="testArray2()">
+</body>
+</html>

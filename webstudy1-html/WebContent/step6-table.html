@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table 연습</title>
+<style type="text/css">
+	table{
+		border-collapse: collapse; /*단선 그려짐*/
+	}
+	table,td{
+		border: 1px solid;
+	}
+	/* 내부 간격을 준다 */
+	td{
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+<table>
+ <tr>
+ 	<td colspan="2">이 력 서</td>
+ </tr>
+ <tr>
+ 	<td>이름</td><td>아이유</td>
+ </tr>
+ </table>
+ <hr>
+ <!-- 
+ 	  명단  아이유
+ 	         김연아
+ 	         이상화 
+  -->
+  <table>
+  	<tr>
+  		<td rowspan="3">명단</td>
+  		<td>아이유</td>
+  	</tr>
+  	<tr>
+  		<td>김연아</td>
+  	</tr>
+  	<tr>
+  		<td>이상화</td>
+  	</tr>
+  </table>
+<hr>
+<table>
+	<tr>
+		<td colspan="2" style="background-color: green;" height="50" align="center" >자기소개</td>
+	</tr>
+	<tr>
+		<td style="background-color:silver;">이름</td><td style="background-color:fuchsia;">김영호</td>
+	</tr>
+	<tr>
+		<td rowspan="3" style="background-color:blue;">특기</td>
+		<td style="background-color:orange;">검도</td>
+	</tr>
+	<tr>
+		<td style="background-color:orange;">노래</td>
+	</tr>
+	<tr>
+		<td style="background-color:orange;">총검술</td>
+	</tr>
+</table>
+</body>
+</html>

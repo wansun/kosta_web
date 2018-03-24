@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript function</title>
+<script type="text/javascript">
+	//javascript function 함수
+	function hello(){
+		alert("방가 자바스크립트 함수");
+	}
+	function bye(angel) {//매개변수는 별도의 타입이 없다.
+		alert("안뇽 : "+angel);
+	}
+	function go(){
+		var info=returnTest();
+		alert(info+" 나도");
+	}
+	function returnTest(){
+		return "배고파"; //자바스크립트 함수 리턴
+	}
+	function sendMessage() {
+		var flag=confirm("점심 먹으러 갈까요?");
+		alert(flag);
+		
+	}
+</script>
+</head>
+<body>
+자바스크립트 함수 기본 연습<br><br>
+<input type="button" value="test1" onclick="hello()"><br><br>
+<input type="button" value="test2" onclick="bye('김연아')"><br><br>
+<input type="button" value="test3" onclick="go()"><br><br> 
+<input type="button" value="test4" onclick="sendMessage()"><br><br>   
+</body>
+</html>

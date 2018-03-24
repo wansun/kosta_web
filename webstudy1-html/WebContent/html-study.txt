@@ -1,0 +1,11 @@
+** HTML **
+참고사이트 : www.w3schools.com
+
+HTML - HyperText Markup Language
+		웹 문서의 구성을 정의하는 언어
+		웹서버에서 응답된 html 정보를
+		웹브라우저가 번역하여 화면의 형태로 제공하게 된다
+	
+JavaScript - 웹 문서의 행위를 정의하는 언어
+			(최근에는 client-side 뿐만 아니라 server-side에서도 역할을 담당)
+CSS - 웹 문서의 디자인 스타일을 담당한다.			

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+div{
+	text-align: center;
+}
+
+.header{
+	height: 50px;
+}
+
+.main{
+	height: 100px;
+}
+
+.left,.right{
+	background: lime;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkbox</title>
+<script type="text/javascript">
+function checkForm() {
+	var f=document.menuForm.food;
+	var flag=false; //선택 되어있는지 상태확인
+	//food체크된게 거짓이면 창 띄워야함.
+	for(var i=0;i<f.length;i++){
+		if(f[i].checked){//선택이 되어있다면 상태를 true 로 바꾸고 빠져나감			
+			flag=true;
+			break;
+		}	
+	}
+	if(flag==false)
+		alert("체크 확인 요망");
+	return flag;
+}
+</script>
+</head>
+<body>
+<!-- 
+	step6.checkServlet
+	
+	1. 치킨
+	2. 소맥
+	주문 완료
+	
+	javascript로 체크 검증
+ -->
+<form action="checkServlet" method="post" name="menuForm"
+onsubmit="return checkForm()"> <!-- () 꼭 확인!! -->
+	<input type="checkbox" name="food" value="치킨">치킨<br>
+	<input type="checkbox" name="food" value="맥주">맥주<br>
+	<input type="checkbox" name="food" value="소맥">소맥<br>
+	<input type="submit" value="주문">
+</form>
+</body>
+</html>

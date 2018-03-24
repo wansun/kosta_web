@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS checkbox</title>
+<script type="text/javascript">
+	function order() {
+		var fo=document.menuForm;
+		var fo2=document.menuForm.food;
+		var checkMenu=false;
+		var totalMenu="";
+		
+		for(var i=0;i<fo2.length;i++){
+			if(fo2[i].checked==true){
+				checkMenu=true;
+				totalMenu+=(" "+fo2[i].value);
+			}			
+		}
+		
+		if(fo.userName.value==""){
+			alert("주문자 이름을 입력하세요.");
+		}else if(checkMenu==false){
+			alert("음식을 체크하세요.");
+		}else{
+			alert(fo.userName.value+"오빠 "+totalMenu+" 주문^^");
+		}
+		fo.reset();
+	}
+	function changeAll() {
+		var ca=document.menuForm.allCheck;
+		var fo2=document.menuForm.food;
+		
+		for(var i=0;i<fo2.length;i++){
+			if(ca.checked==false){
+				fo2[i].checked=false;
+			}else{
+				fo2[i].checked=true;
+			}
+		}				
+	}
+</script>
+</head>
+<body>
+<form name="menuForm">
+	주문자<input type="text" name="userName"><br><br>
+	<input type="checkbox" name="allCheck" onclick="changeAll()">전체주문<br>
+	<input type="checkbox" name="food" value="스파게티">스파게티<br>
+	<input type="checkbox" name="food" value="떡볶이">떡볶이<br>
+	<input type="checkbox" name="food" value="김밥">김밥<br>
+	<input type="button" value="주문" onclick="order()">
+</form>
+<!-- 주문자 입력란을 확인하여 공란일 경우 
+		주문자명을 입력하세요
+		주문 항목에 하나 이상 체크하지 않고
+		버튼을 누를 경우 메뉴 체크를 확인하세요
+		
+		주문자명 입력했고 메뉴항목 체크되어 있을경우
+		ex) 윤희 오빠 스파게티 김밥 주문^^ 
+ -->
+</body>
+</html>

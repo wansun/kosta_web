@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>http post 연습</title>
+<!--  공란 체크 해보자!! -->
+<script type="text/javascript">
+	function checkForm(){
+		var fo=document.PostServlet2.nickName.value;
+		
+		if(fo.trim().length==0){
+			alert("내용을 입력하세요");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<form action="PostServlet2" name="PostServlet2" method="post" onsubmit="return checkForm();">
+닉네임<input type="text" name="nickName">
+<input type="submit" value="전송">
+</form>
+</body>
+</html>

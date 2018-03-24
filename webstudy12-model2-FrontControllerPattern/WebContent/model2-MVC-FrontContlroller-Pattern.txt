@@ -1,0 +1,132 @@
+** Model2 Architecture **
+
+기존 방식
+  JSP or Servlet   <--> DB 
+
+  
+
+Model 1 Architecture 
+  JSP or Servlet <--> Java Beans <--> DB 
+
+  
+
+Model 2 Architecture ( MVC Pattern ) 
+    Controller(Servlet)
+           				Model(Java beans) <--> DB
+ 		 View(JSP)
+
+  
+
+Model :  주기술 Java Beans 
+     Business logic 처리 
+     Data Access logic 
+          각종 알고리즘 및 트랜잭션 처리 
+
+     
+
+View :  주기술 JSP  
+         클라이언트에게 응답하는 화면을 전담      
+
+     
+
+Controller : 주기술 Servlet 
+      웹어플리케이션의 제어자 역할 
+      클라이언트의 요청분석 
+   Model 계층과 연동 
+      적절한 View 선택해 이동하여 응답하게 한다 
+
+      
+
+Servlet(Controller)에서 JSP(View)로 제어를 이동하는 방식 
+
+1. forward 
+   :  request와 response가 유지된다 
+      필요시 request 의 setAttribute(name,value) 를 이용해 
+      정보를 공유하고 
+   View에서는 request.getAttribute(name) 를 이용해 클라이언트에게
+      정보를 제공한다 
+
+      웹컨테이너 상에서 이동되므로 클라이언트 브라우저의 url은 
+      변경되지 않는다 
+      재요청시 기존 동작이 반복될 수 있다 
+  
+
+   ex) request.setAttribute("cvo", vo);
+
+  request.getRequestDispatcher("select_ok.jsp").forward(request, response);       
+
+      
+
+ 2. redirect 
+    : 응답(response) 시  client browser 에서 특정 url로 이동을 명령하는 방식 
+      기존 request와 response는 유지되지 않고 새로 생성한다 
+ 
+ 
+*** Front Controller Design Pattern ***
+
+Model2 Architecture 에서 MVC Pattern과 함께 적용되는
+디자인 패턴      
+      
+-> 모든 클라이언트의 요청을 하나의 진입점 (컨트롤러서블릿)으로
+     집중시키는 설계 패턴
+     예) 호텔 프런트, 회사의 콜센터 ...
+     
+     생산성 : 중복작업 방지를 통해 재사용성을 높인다
+     (예 : 인코딩, 예외처리, 보안(인증 및 인가) 정책 등 ..)
+     유지보수성 : 역할 분담을 통해 이후 변경작업에 유연하게 대처
+     
+   Modle2 (MVC + FrontController Pattern)
+   
+  - case1
+   		client 검색요청  --> DispatcherServlet
+   		client 등록요청  -->    
+        ....
+      
+       : Front Controller인 DispatcherServlet의
+                코드량이 증가 -> 개선이 필요
+  
+  - case2 (DispatcherServlet2에 적용)
+  		DispatcherServlet2 내에서
+  		메서드로 분리
+  		
+  		DispatcherServlet2
+  		doGet(), doPost()
+  		handleRequest()
+  		find()
+  		register()
+  		
+  		->메서드로 분리해도 이후 요구사항이 증가되면
+  		    클래스 자체의 규모가 너무 커진다.
+  
+  - case3 : find() , register() 와 같은 메서드가 별도의 클래스로 분리
+  			개별 컨트롤러 업무별로 클래스를 분화시키고
+  			다형성(Polymorphism) 지원을 위해 계층구조를 형성한다.
+  			:다형성이란 하나의 메세지 방식으로 다양한 객체들이(다양한 컨트롤러 객체들이)
+  			  각자의 방식으로 동작할 수 있는 성질
+      			
+    	    			  Controller 영역
+     client -- request -- DispatcherServlet -- Controller
+   					                                                      ㅣ                          
+   					                             ㅣimplements 
+   	   								         FindController RegisterController		
+      
+  - case4
+  
+		 * 컨트롤러 구현체 생성을 전담하는
+		 * 클래스 (Factory) -> DispatcherServlet 과 Controller 구현체들과의
+		 * 결합도를 낮추는 역할을 한다. ex) 이 클래스는 회사에서 인사팀이라 생각하면됨
+		 * 
+		 * ver3
+		 *      사장                                     직원
+		 *    DispatcherServlet      Controller
+		 *    
+		 * ver4   
+		 * ->   사장                                      인사팀                            직원
+		 *    DispatcherServlet      HandlerMapping       Controller 
+ 
+      
+      
+      
+      
+      
+      

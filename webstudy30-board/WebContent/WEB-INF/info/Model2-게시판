@@ -1,0 +1,20 @@
+** Model2 게시판 **
+요구분석 - 설계 - 구현 - 테스트 
+
+분석 : Usecase Diagram(Usecase 시나리오) , UI 설계 , ERD 논리
+		
+		Usecase
+		게시물목록
+		로그인 로그아웃
+		상세글보기
+		글쓰기
+		삭제m
+		수정
+		
+설계 : Class Diagram(model - class 명 중심으로)
+		ERD 물리
+		
+		view : file list (디렉토리 분할)
+		
+----------------------------------------------------------------------
+ERD논리, Class Diagram, view file list 

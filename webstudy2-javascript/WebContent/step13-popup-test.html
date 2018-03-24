@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>새창 띄우기 테스트</title>
+<script type="text/javascript">
+	function openPopup(){
+		//alert(1);
+		//window.open() .. window 생략가능
+		open("step14-popup.html","mypopup","width=200 ,height=200,height=200,top=150,left=200");
+	}
+</script>
+</head>
+<body>
+<form name="testForm">
+<input type="text" name="userId">
+<input type="button" value="새창띄우기" onclick="openPopup()">
+</form>
+</body>
+</html>

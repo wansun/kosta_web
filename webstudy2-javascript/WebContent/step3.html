@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>confirm test</title>
+<script type="text/javascript">
+	function testConfirm() {
+		var result=confirm("오늘 지각한 사람 노래시킬까요?");
+		if(result){
+			alert("네, 노래 일발장전");
+		}else{
+			//alert("아니요, 생일자 노래시켜요");
+			//아래 div 아이디가 message인 요소에 생일자 노래 시켜요 라고 출력
+			document.getElementById("message").innerHTML="황명아 노래";
+		}
+	}
+</script>
+<style type="text/css">
+	div{
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+<input type="button" value="confirm tst" onclick="testConfirm()"><br><br>
+<div id="message">메세지:</div>
+</body>
+</html>

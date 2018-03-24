@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript form</title>
+<script type="text/javascript">
+	function checkForm() {
+		// name 으로 접근 : document.폼이름.요소이름
+		//alert(document.customerForm.customerName.value);
+		//form까지만 변수로 저장
+		var f=document.customerForm;
+		
+		if(f.customerName.value==""){//공란이면
+			alert("이름을 입력하세요");
+		}else if(f.money.value==""){//공란이면
+			alert("입금액을 입력하세요");		
+		}else if(isNaN(f.money.value)){//넘버가 아니면
+			alert("입금액 잘못 입력하셨습니다");
+		}else if(f.money.value<=0){//0원 이하면
+			alert("입금액은 0원을 초과해야 합니다.");
+		}else{//공란이 아니면
+			alert(f.customerName.value+"님"+f.money.value+"원 입금하였습니다");
+		}
+	}
+</script>
+</head>
+<body>
+<form name="customerForm">
+고객명 <input type="text" name="customerName"><br><br>
+입금액 <input type="text" name="money"><br><br>
+<input type="button" value="확인" onclick="checkForm()"> 
+</form>
+<!-- 확인 눌렀을 때
+	고객명이 공란이면
+	이름을 입력하세요 alert 후 focus
+	입금액이 공란이면
+	입금액을 입력하세요 alert	
+	입금액은 숫자가 아니면
+	입금액은 숫자로 입력해주세요 alert : isNaN():
+	입금액이 0원 이하이면
+	입금액은 0원을 초과해야 합니다 alert
+	
+	고객명과 입금액 모두 입력되었으면
+	황명아님 1000원 입금하였습니다.
+ -->
+</body>
+</html>

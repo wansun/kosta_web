@@ -1,0 +1,14 @@
+** Singleton Design Pattern **
+싱글톤 디자인 패턴이란? 시스템 상에서 단 하나의 객체만
+					생성해 공유하여 사용하고자 할 때
+					적용하는 패턴
+					(참고 - spring framework의 IOC 객체 운영방식의 기본이
+							singleton이다)
+- 적용방안
+private 생성자를 적용해 외부에서 객체 생성하는 것을 방지한다.
+
+class loading 시 static 영역이 class area에 초기화되는 것을
+이용해 자신의 클래스내의 static 변수로 객체를 생성한다.
+
+현 객체를 이용하는 사용자 측을 위해 public static 메서드로
+자신의 객체 레퍼런스(주소값이 담긴 변수)를 공유한다.							 

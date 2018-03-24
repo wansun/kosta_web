@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript form</title>
+<script type="text/javascript">
+	function moveTxt() {
+		var orgComp=document.getElementById("orgTxt");		
+		var destComp=document.getElementById("destTxt");		
+		destComp.value=orgComp.value;
+		orgComp.value="";
+		orgComp.focus();
+	}
+</script>
+</head>
+<body>
+<input type="text" id="orgTxt" autofocus="autofocus">
+<input type="button" value="오른쪽으로 이동" onclick="moveTxt()">
+<input type="text" id="destTxt">
+</body>
+</html>

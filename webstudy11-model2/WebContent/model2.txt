@@ -1,0 +1,66 @@
+** Model2 Architecture **
+
+기존 방식
+  JSP or Servlet   <--> DB 
+
+  
+
+Model 1 Architecture 
+  JSP or Servlet <--> Java Beans <--> DB 
+
+  
+
+Model 2 Architecture ( MVC Pattern ) 
+    Controller(Servlet)
+           				Model(Java beans) <--> DB
+ 		 View(JSP)
+
+  
+
+Model :  주기술 Java Beans 
+     Business logic 처리 
+     Data Access logic 
+          각종 알고리즘 및 트랜잭션 처리 
+
+     
+
+View :  주기술 JSP  
+         클라이언트에게 응답하는 화면을 전담      
+
+     
+
+Controller : 주기술 Servlet 
+      웹어플리케이션의 제어자 역할 
+      클라이언트의 요청분석 
+   Model 계층과 연동 
+      적절한 View 선택해 이동하여 응답하게 한다 
+
+      
+
+Servlet(Controller)에서 JSP(View)로 제어를 이동하는 방식 
+
+1. forward 
+   :  request와 response가 유지된다 
+      필요시 request 의 setAttribute(name,value) 를 이용해 
+      정보를 공유하고 
+   View에서는 request.getAttribute(name) 를 이용해 클라이언트에게
+      정보를 제공한다 
+
+      웹컨테이너 상에서 이동되므로 클라이언트 브라우저의 url은 
+      변경되지 않는다 
+      재요청시 기존 동작이 반복될 수 있다 
+  
+
+   ex) request.setAttribute("cvo", vo);
+
+  request.getRequestDispatcher("select_ok.jsp").forward(request, response);       
+
+      
+
+ 2. redirect 
+    : 응답(response) 시  client browser 에서 특정 url로 이동을 명령하는 방식 
+      기존 request와 response는 유지되지 않고 새로 생성한다 
+      
+      
+      
+      

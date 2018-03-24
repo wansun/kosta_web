@@ -1,0 +1,66 @@
+@charset "UTF-8";
+li{
+		color:#FE9A2E;
+	}
+	/*
+		css  class 가 test1 인 대상만 별도로 선택하여 스타일을 부여 
+		.클래스명{
+			스타일 
+		}
+	*/
+	.test1{
+		color: #58FAD0;
+	}
+	/*
+		class 는 여러 요소들을 한번에 설정할 때 적용  셀렉터  .클래스명
+		id는 유일한 요소를 지정할 때 적용  셀렉터 #아이디 
+	*/
+	#test2{
+		color: #B40404;
+	}
+	table {
+		border-collapse: collapse; 
+	}
+	table,th,td{
+		border: 1px solid #0431B4;
+	}
+	th,td{
+		padding: 15px;
+	}
+	a{
+		text-decoration: none;
+		color: #A5DF00;
+	}
+	a:hover{
+		color: #0B610B;
+	}
+	div{
+		background-color: #CEECF5;
+	}
+	span{
+		background-color: #B404AE;
+	}
+	.container{
+		background-color:  white;
+		padding-top: 15px;
+		padding-left: 70px;
+		padding-right: 50px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

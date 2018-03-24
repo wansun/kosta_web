@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>confirm, location 연습</title>
+</head>
+<script type="text/javascript">
+	function enterHome() {
+		//id 가 userName인 입력창에서 value를 반환받는다.
+		var info=document.getElementById("userName").value;
+		if(confirm(info+"님 성인사이트로 입장 하시겠습니까?")){
+			//alert("입장");
+			//실제 사이트로 이동시킨다.
+			location.href="http://www.iconix.co.kr/";
+		}
+	}
+</script>
+<body>
+이름<input type="text" id="userName" name="userName">
+<input type="button" value="입장" onclick="enterHome()">
+<!-- 입장 버튼 누르면 confirm 으로 입장 하시곘습니까
+         확인 누르면 alert 으로 입장 취소누르면 아무 행위없음 -->
+</body>
+</html>

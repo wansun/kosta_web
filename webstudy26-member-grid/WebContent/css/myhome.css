@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.header{
+	background-color: pink;
+	text-align: center;	
+	height: 120px;
+	font-size: 100px;
+}
+
+.main{
+	font-size: 20px;
+	text-align: center;
+	height: 500px;
+}
+
+.footer{
+	font-size: 20px;
+	text-align: center;
+	background-color: #82FA58;
+}
+
+.center{
+	padding-top: 200px;
+}
+
+.right{
+	background-color: #FBEFEF;	
+}
+
+a:hover{
+	color: red;
+}
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지창</title>
+<script type="text/javascript">
+	function closeWindow(){
+		//공지창을 띄운 창에 대한 제어를 하기 위해
+		// 본 창에 접근해본다 opener.document.품이름.입력요소이름.focus();
+		// openr : 새창을 띄운 본창을 가르킨다.
+		opener.document.testForm.userId.value="팝업에서 입력";
+		self.close();
+	}
+</script>
+</head>
+<body bgcolor="grreen" onunload="closeWindow()">
+공지창입니다.<br><br>
+<input type="button" value="확인" onclick="closeWindow()">
+</body>
+</html>

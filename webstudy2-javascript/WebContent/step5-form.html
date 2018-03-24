@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript form 제어</title>
+<script type="text/javascript">
+	function checkForm() {
+		// name 으로 접근해서 입력값을 확인
+		//test1
+		/* var nick=document.testForm.nickName.value;//접근해서
+		alert(nick);//출력
+		document.testForm.nickName.value="";//값을 재할당
+		document.testForm.nickName.focus();//text nickName에 포커스 준다. */
+		
+		//test2
+		/* var nickComp=document.testForm.nickName; //text 요소를 변수에 할당
+		//alert(nickComp);
+		alert(nickComp.value);
+		nickComp.value="";
+		nickComp.focus(); */
+		
+		///id를 이용해 접근하는 방법
+		//test3
+		var nickComp2 = document.getElementById("nickName");
+		//alert(nickComp2);
+		alert(nickComp2.value);
+		nickComp2.value="";
+		nickComp2.focus();
+	}
+</script>
+</head>
+<body>
+<form name="testForm">
+	닉네임 <input type="text" name="nickName" id="nickName"><br>
+	<input type="button" value="확인" onclick="checkForm()">
+</form>
+</body>
+</html>

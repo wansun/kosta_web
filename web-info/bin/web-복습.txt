@@ -1,0 +1,13 @@
+** web programming 관련 주요 복습 키워드 (18-03-12) **
+- html, javascript, css 의 역할
+- WAS, Web Container 정의
+- HTTP 정의
+- 요청 메서드 GET방식과 POST방식
+- Servlet & JSP 의 역할
+- Servlet Life Cycle 설명
+- ServletConfig 와 ServletContext 정의
+- JSP Life Cycle 설명
+- Model1 과 Modle2 (MVC)
+- Singleton Design Pattern
+- forward 와 redirect 이동방식
+- Cookie 와 Session

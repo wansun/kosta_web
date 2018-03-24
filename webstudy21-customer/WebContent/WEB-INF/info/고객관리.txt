@@ -1,0 +1,14 @@
+** 고객 관리 **
+
+- 적용기술 : java SE, JDBC, DataBase, html , javascript, css
+				Servlet/JSP, Model2 MVC
+				상세기술 -> DBCP, jsp forward, jsp include
+				
+- 요구분석 :  UML ->UseCase Diagram
+
+- 설계 :  database -> cutomer.sql;
+			application -> file List or Class Diagram
+								Model :
+								Controller :
+								View : mystyle.css
+										  header.jsp (include 대상)

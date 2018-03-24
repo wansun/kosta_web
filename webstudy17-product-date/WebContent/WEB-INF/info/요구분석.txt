@@ -1,0 +1,15 @@
+** 상품관리 **
+요구분석
+- UseCase Diagram
+
+
+설계
+- application modeling
+  : UML Class Diagram -> model, controller
+    view 
+    -> file list  :  css/home.css
+                       index.jsp
+                       register_product.jsp
+                       register_list.jsp
+                       detail_product.jsp
+    

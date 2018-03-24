@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>review</title>
+<script type="text/javascript">
+function checkNick(){
+	var nv=document.getElementById("nick").value;
+	if(nv.trim().length==0){
+		alert("닉네임을 입력하세요");
+		return false;
+	}
+	if(nv.trim().length>5){
+		alert("닉네임은 5자 이내로 입력하세요");
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<!-- html : 웹문서 구조
+	 javascript : 행위
+	 css : 디자인 스타일
+ -->
+ <!-- 링크는
+ 	  http 요청방식 중 get 방식으로 요청된다
+ 	  데이터를 함꼐 전송하기 위해서는 query string 방식으로
+ 	  ?id=javaking&name=아이유 와 같은 형석으로 전송하면 된다
+ 	  get 방식은 정보 조회용 
+  -->
+<a href="ReviewServlet?id=javaking">ReviewServlet</a><br><br>
+<!-- post 방식은 정보 전송용
+	 http request body 영역에 저장되어 전송된다
+	 즉 get 방식과는 다르게 url에 노출되지 않는다. 
+ -->
+<form action="ReviewServlet" method="post" onsubmit="return checkNick()">
+아이디 <input type="text" name="userId" required="required"><br>
+닉네임 <input type="text" name="userNick" id="nick" required="required">(5자 이내)<br>
+<input type="submit" value="등록">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+

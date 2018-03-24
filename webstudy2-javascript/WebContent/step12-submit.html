@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step12-submit.html</title>
+<script type="text/javascript">
+	function checkForm() {
+		/* var nick="";
+		//trim() 함수를 이용해 양여백을 삭제한 후 길이를 구하면 0
+		alert(nick.trim().length); */
+		if(document.menuForm.menu.value.trim().length==0){
+			alert("메뉴를 입력하세요");
+			document.menuForm.menu.value="";
+			document.menuForm.menu.focus();
+			return false; //전송을 막는다 즉 submit 시키지 않는다.
+		}
+	}
+</script>
+</head>
+<body>
+<form action="/webstudy3-servlet-basic/hello" 
+name="menuForm" onsubmit="return checkForm()">	<!-- return false -->
+	메뉴 : <input type="text" name="menu" required="required"><br><br><br><br><br>
+	<input type="submit" value="전송"><!-- 온클릭 온서브밋 구분 잘해야함 -->
+</form>
+</body>
+</html>

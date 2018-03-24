@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>http post방식 요청</title>
+</head>
+<body>
+<!-- 
+	action 즉 처리할 서버프로그램 url 은 PostServlet
+	method 요청방식은 post 이므로
+	서블릿의 구현메서드는 doPost(request,response)
+	이어야 한다
+ -->
+<form action="PostServlet" method="post">
+닉네임 <input type="text" name="nickName">
+<input type="submit" value="전송">
+</form>
+</body>
+</html>

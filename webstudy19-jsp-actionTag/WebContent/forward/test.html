@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>forward actionTag test</title>
+</head>
+<body>
+<form action="forward-action.jsp">
+이름 : <input type="text" name="userName"><br>
+나이 : <input type="text" name="userAge"><br>
+<input type="submit" value="입장">
+</form>
+<!-- 
+		test.html  -- request -- forward-action.jsp
+											유동규님 20세 성인입니다.
+											만약 미성년자이면 
+											forward 처리해서
+											별도의 child-view.jsp가 응답하도록 처리한다.
+ -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select option</title>
+
+</head>
+<body>
+<!-- 
+	step5. SelectServlet
+	맥주 5인분 주문완료
+	1~10인분까지만 가능하므로
+	0인분, -1인분 또는 11인분 이런 정보는
+	메세지를
+	맥주는 10분까지만 가능합니다.
+ -->
+<form action="SelectServlet">
+	<select name="menu">
+		<option value="치킨">치킨</option>
+		<option value="맥주">맥주</option>
+		<option value="소주">소주</option>
+	</select>
+	<br><br><br>
+	<input type="number" name="count">인분
+	<input type="submit" value="주문">
+</form>
+</body>
+</html>

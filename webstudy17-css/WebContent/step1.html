@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css selector</title>
+<style>
+	li{
+		color: #B40431;
+	}
+	/*
+		css class 가 test1인 대상만 별도로 선택하여 스타일을 부여
+		.클래스명{
+			스타일
+	    }
+	*/
+	.test1{
+		color: #80FF00;
+	}
+	/*
+		class 는 여러 요소들을 한번에 설정할 때 적용 셀렉터  .클래스명
+		id 는 유일한 요소를 지정할 때 적용  셀렉터 #아이디
+	*/
+	#test2{
+		color: #4000FF;
+	}
+</style>
+</head>
+<body>
+<ul> <!-- 순서없는 목록태그 ul -->
+	<li>css는 웹페이지의 디자인 스타일을 담당</li>
+	<li>html은 웹페이지의 컨텐트를 담당</li>
+	<li class="test1">javascript는 웹페이지의 행위를 담당</li>
+	<li id="test2">Servlet은 WAS에서 동작되는 Java Web 기술</li>
+	<li class="test1">JSP는 동적인 웹피이지 구현을 위한 기술</li>
+</ul>
+</body>
+</html>

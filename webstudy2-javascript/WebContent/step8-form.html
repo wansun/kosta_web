@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript form</title>
+<script type="text/javascript">
+	function register() {
+		var f=document.memberForm;
+		
+		if(f.memberId.value==""){
+			alert("아이디를 입력하세요");
+		}else if(f.memberPass.value==""){
+			alert("비밀번호를 입력하세요");
+		} else if(f.memberPass.value==f.confirmPass.value){
+			alert(f.memberId.value+" 님 가입~");
+		}else if(f.confirmPass.value==""){			
+			alert("비밀번호 재확인 미입력");
+		}else{
+			alert("비밀번호와 비밀번호 확인란이 다릅니다.");
+		} 
+			
+	}
+</script>
+</head>
+<body>
+<form name="memberForm">
+<marquee scrollamount="70">
+아이디<input type="text" name="memberId"><br>
+</marquee>
+<marquee scrollamount="80">
+패스워드<input type="password" name="memberPass"><br>
+</marquee>
+<marquee scrollamount="90">
+패스워드 확인<input type="password" name="confirmPass"><br>
+</marquee>
+<marquee scrollamount="100">
+<img src="image/가입버튼.jpg" width="400" height="100" onclick="register()" style="cursor:pointer">
+</marquee>
+</form>
+<!-- 아이디 패스워드 패스워드 확인 공란체크
+	패스워드와 패스워드확인 입력 정보가 동일해야 한다. 
+	
+	문제 없으면 가입 완료!
+ -->
+</body>
+</html>

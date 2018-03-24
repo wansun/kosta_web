@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>request test</title>
+</head>
+<body>
+<!-- 아래와  같은 링크는 get 방식 요청이다. 
+	 링크 클랙했을떄 정보를 전달하고 싶다면
+	 query string 방식으로 전달하면 된다
+-->
+<a href="requestTest?id=devil&name=조민경">RequestTestServlet</a><br><br>
+<hr>
+<!-- form에서 별도의 method 즉 요청방식이 명시되어 있지않으면
+	 get 방식 요청이다
+ -->
+<form action="requestTest">
+아이디 <input type="text" name="id">
+이름<input type="text" name="name">
+<input type="submit" name="전송">
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+a{
+		text-decoration: none;
+		color: #FF0040;
+	}
+	
+a:hover{
+		color: #8A0829;
+	}
+	
+div{
+	font-size: 100px;
+}
+
+form{
+ 	font-size: 40px;
+}
+table{
+		border-collapse: collapse;
+
+	}
+table,tr,td{
+		border: 1px solid black;
+	}
+tr,td{
+		font-size: 20px;
+		padding: 30px;
+	}
